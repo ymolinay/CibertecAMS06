@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Imagen del lugar turístico -->
+    <ImageView
+        android:id="@+id/detailImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <!-- Ubicación del lugar turístico en un Chip -->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/locationChip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/detailTourismName"
+        app:layout_constraintStart_toEndOf="@id/detailTourismName"
+        app:layout_constraintTop_toTopOf="@id/detailTourismName"
+        tools:text="Location"
+        tools:visibility="visible" />
+
+    <!-- Nombre del lugar turístico -->
+    <TextView
+        android:id="@+id/detailTourismName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailImage"
+        tools:text="My favorite tourism place" />
+
+    <!-- Descripción del lugar turístico -->
+    <TextView
+        android:id="@+id/detailTourismDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationChip"
+        tools:text="My favorite tourism place my favorite tourism place my favorite tourism place my favorite tourism place" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
